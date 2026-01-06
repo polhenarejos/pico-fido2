@@ -2,6 +2,8 @@
 
 This project transforms your Raspberry Pi Pico or ESP32 microcontroller into an integrated FIDO Passkey **and** OpenPGP smartcard, functioning like a standard USB Passkey for authentication and as a smartcard for cryptographic operations.
 
+This firmware is available through [PicoKey App](https://www.picokeys.com/picokeyapp/ "PicoKey App"). It is the combination of the open-source projects [Pico Fido](https://github.com/polhenarejos/pico-fido "Pico Fido") and [Pico OpenPGP](https://github.com/polhenarejos/pico-openpgp "Pico OpenPGP")
+
 ---
 
 ## Features
@@ -40,12 +42,13 @@ Pico FIDO2 includes the following features:
 - Challenge-response generation
 - Emulated keyboard interface
 - Button press generates an OTP that is directly typed
+- Yubico Authenticator app compatible 
 - Yubico YKMAN compatible
 - Nitrokey nitropy and nitroapp compatible
 - Secure Boot and Secure Lock in RP2350 and ESP32-S3 MCUs
 - One Time Programming to store the master key that encrypts all resident keys and seeds.
 - Rescue interface to allow recovery of the device if it becomes unresponsive or undetectable.
-- LED customization with Pico Commissioner.
+- LED customization with PicoKey App.
 
 ### OpenPGP Smartcard
 
@@ -78,11 +81,11 @@ Microcontrollers RP2350 and ESP32-S3 are designed to support secure environments
 
 If you own a Raspberry Pico (RP2040 or RP2350), go to the Download page, select your vendor and model and download the proper firmware; or go to the Release page and download the UF2 file for your board.
 
-Note that UF2 files are shipped with a dummy VID/PID to avoid license issues (FEFF:FCFD). If you plan to use it with other proprietary tools, you should modify Info.plist of CCID driver to add these VID/PID or use the Pico Commissioner.
+Note that UF2 files are shipped with a dummy VID/PID to avoid license issues (FEFF:FCFD). If you plan to use it with other proprietary tools, you should modify Info.plist of CCID driver to add these VID/PID or use the [PicoKey App](https://www.picokeys.com/picokeyapp/ "PicoKey App").
 
 You can use whatever VID/PID (i.e., 234b:0000 from FISJ), but remember that you are not authorized to distribute the binary with a VID/PID that you do not own.
 
-Note that the pure-browser option Pico Commissioner is the most recommended.
+Note that the [PicoKey App](https://www.picokeys.com/picokeyapp/ "PicoKey App") is the most recommended.
 
 ---
 
